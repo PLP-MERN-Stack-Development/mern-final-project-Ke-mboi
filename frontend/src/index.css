@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+/* Full-screen background image — ONLY behind everything */
+#root {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
+    url('/juakali.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* Card keeps its own clean white background — NOT affected by the image */
+.card {
+  background: white;                     /* ← pure white background */
+  color: #1f2937;                         /* ← dark text */
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  padding: 40px 32px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+/* Rest of your styles — adjusted for white card */
+.title {
+  font-size: 3.8rem;
+  font-weight: 900;
+  background: linear-gradient(to right, #7c3aed, #ec4899);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #4b5563;
+  margin-bottom: 32px;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #7c3aed, #ec4899);
+  color: white;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+  transition: all 0.3s;
+  width: 100%;
+  margin: 12px 0;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.5);
+}
+
+input, select {
+  width: 100%;
+  padding: 16px 20px;
+  margin: 10px 0;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.15);
+}
+
+input::placeholder {
+  color: #9ca3af;
+}
+
+.success { color: #10b981; font-weight: bold; font-size: 1.3rem; margin-top: 20px; }
+.error { color: #ef4444; font-weight: bold; font-size: 1.3rem; margin-top: 20px; }
+
+a {
+  color: #7c3aed;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
